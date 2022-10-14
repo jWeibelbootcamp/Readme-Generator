@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const markdown = require('./generateMarkdown');
 
 const questions = [
     {
@@ -8,38 +9,38 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Description of the project.',
-        name: 'description',
-    },
-    {
-        type: 'input',
         message: 'URL for the project.',
         name: 'URL',
     },
     {
         type: 'input',
+        message: 'Description of the project.',
+        name: 'description',
+    },
+    {
+        type: 'input',
         message: 'Provide any installation instructions.',
-        name: 'installation instructions',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'Instructions for how to use the application.',
-        name: 'usage information',
+        name: 'usage',
     },
     {
         type: 'input',
         message: 'What resources contributed to the project?',
-        name: 'contribution guidelines',
+        name: 'contribution',
     },
     {
         type: 'input',
         message: 'How was the project tested?',
-        name: 'test instructions',
+        name: 'test',
     },
     {
         type: 'input',
         message: 'GitHub user name?',
-        name: 'gitHub user name',
+        name: 'gitHub',
     },
     {
         type: 'input',
@@ -51,9 +52,9 @@ const questions = [
         message: 'What license is authorized?',
         name: 'license',
         choices: ['MIT', 'ISC', 'None'],
-        filter(value) {
-            return value.toLowerCase();
-        }
+        // filter(value) {
+        //     return value.toLowerCase();
+        // }
     }
 ]
 
