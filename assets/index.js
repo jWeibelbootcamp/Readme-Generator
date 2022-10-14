@@ -37,12 +37,6 @@ const questions = [
         name: 'test instructions',
     },
     {
-        type: 'list',
-        message: 'What license is authorized?',
-        name: 'license',
-        choices: ['MIT', 'ISC', 'None']
-    },
-    {
         type: 'input',
         message: 'GitHub user name?',
         name: 'gitHub user name',
@@ -51,6 +45,15 @@ const questions = [
         type: 'input',
         message: 'Enter your email address.',
         name: 'email',
+    },
+    {
+        type: 'list',
+        message: 'What license is authorized?',
+        name: 'license',
+        choices: ['MIT', 'ISC', 'None'],
+        filter(value) {
+            return value.toLowerCase();
+        }
     }
 ]
 
@@ -60,7 +63,14 @@ function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 function init() {
-
+    return inquirer.prompt(questions) 
+        .then( (answers) => {
+            console.log(answers);
+            return answers;
+        })
+        .catch( (error) => {
+            console.log(error);
+        });
 };
 
 // Function call to initialize app
