@@ -18,13 +18,6 @@ const questions = [
         message: 'URL for the project.',
         name: 'URL',
         default: 'no project URL available.'
-        // validate: answer => {
-        //     const pass = answer.match(/^https?:\/\/$/)
-        //     console.log(pass);
-            // if (pass) {
-            //     return true;
-            // } return 'valid URL address starting with https or http is required.'
-        // }
     },
     {
         type: 'input',
@@ -66,9 +59,6 @@ const questions = [
         message: 'What license is authorized?',
         name: 'license',
         choices: ['MIT', 'Apache 2.0', 'GPL', 'None'],
-        // filter(value) {
-        //     return value.toLowerCase();
-        // }
     }
 ]
 
