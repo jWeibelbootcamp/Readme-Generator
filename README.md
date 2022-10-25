@@ -3,7 +3,7 @@
 
 [![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0)
 
-![screenshot](/Readme-Generator/assets/images/Readme-Gen-SS.png)
+![screenshot](/assets/images/Readme-Gen-SS.png)
 
 ### [Project URL](https://jweibelbootcamp.github.io/Readme-Generator//) 
 
